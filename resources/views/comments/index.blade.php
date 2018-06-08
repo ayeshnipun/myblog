@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="col-md-8">
+        <h2>Welcome {{ Auth::user()->name }}</h2>
+    </div>
     <h1 class="row justify-content-center">COMMENTS</h1><br>
     @if(count($comments) > 0)
         @foreach($comments as $comment)

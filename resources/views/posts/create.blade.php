@@ -6,18 +6,18 @@
     </div><br>
 
     <div class="formcstm">
-        {!! Form::open(['action' => 'PostsController@store', 'method'=>'POST']) !!}
+        {!! Form::open(['action' => 'PostsController@store', 'method'=>'POST', 'enctype'=>'multipart/form-data']) !!}
             <div>
                 {{Form::label('type', 'Post Type')}}
                 {{Form::text('type', '', ['class'=>'form-control', 'placeholder'=>'Type of the Post'])}}
             </div><br><br>
+            <div class="form-group">
+                {{Form::label('image', 'Heading Image')}} <br>
+                {{Form::file('cover_image')}}
+            </div><br><br>
             <div>
                 {{Form::label('title', 'Title')}}
                 {{Form::text('title', '', ['class'=>'form-control', 'placeholder'=>'Title'])}}
-            </div><br><br>
-            <div>
-                {{Form::label('image', 'Heading Image')}} <br>
-                {{Form::file('image')}}
             </div><br><br>
             <div>
                 {{Form::label('body', 'Body')}}

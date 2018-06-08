@@ -39,4 +39,5 @@ Route::resource('posts', 'PostsController');
 Route::resource('comments', 'CommentsController');
 Route::resource('blog', 'PagesController');
 
-
+//comments
+Route::post('comments/{post_id}', ['uses'=>'CommentsController@store', 'as'=>'comments.store']);

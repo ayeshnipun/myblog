@@ -9,6 +9,16 @@ use App\User;
 class PostsController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -40,14 +50,36 @@ class PostsController extends Controller
         $this->validate($request, [
             'type' => 'required',
             'title' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+            'cover_image' => 'image|nullable|max:1999'
         ]);
+        //Handle file upload
+        if ($request->hasFile('cover_image')) {
+            //get File name wiith ext
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+
+            //file name
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+            //EXT
+            $ext = $request->file('cover_image')->getClientOriginalExtension();
+
+            //filename to store
+            $filenameToStore = $filename.'_'.time().'.'.$ext;
+
+            //upload image
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $filenameToStore);
+        } else {
+            $filenameToStore = 'noimage.jpg';
+        }
+        
 
         $post = new Post;
         $post->type = $request->input('type');
+        $post->cover_image =  $filenameToStore;
         $post->title = $request->input('title');
-        $post->image = $request->input('image');
         $post->body = $request->input('body');
+        $post->user_id = auth()->user()->id;
         $post->save();
 
         return redirect('/home/posts')->with('success', 'Post Created');
@@ -96,8 +128,8 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->type = $request->input('type');
         $post->title = $request->input('title');
-        $post->image = $request->input('image');
         $post->body = $request->input('body');
+        $post->user_id = auth()->user()->id;
         $post->save();
 
         return redirect('/home/posts')->with('success', 'Post Updated');

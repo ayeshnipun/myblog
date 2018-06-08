@@ -42,7 +42,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                            <li><a class="nav-link active" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
                             <li class="nav-item dropdown">
@@ -115,6 +115,11 @@
 <style>
     .navbar{
         background-color: transparent !important;
+    }
+    .nav a.active {
+        background-color: #f7f8fa;
+        color: #019fc2;
+        cursor: default;
     }
 </style>
 </html>

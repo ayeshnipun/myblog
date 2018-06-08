@@ -1,10 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="col-md-8">
+        <h2>Welcome {{ Auth::user()->name }}</h2>
+    </div>
+
     <div class="text-center">
         <h1>POSTS</h1>
         <a role="button" href="/home/posts/create" class="btn btn-primary">New Post</a><br><br>
-    </div>
+    </div><br>
     @if(count($posts) > 0)
         @foreach($posts as $post)
             <div class="container">
@@ -38,5 +42,9 @@
     .btnlocation{
         position: relative;
         top: 10px;
+    }
+
+    .card{
+        margin-bottom: 0.5cm !important;
     }
 </style>

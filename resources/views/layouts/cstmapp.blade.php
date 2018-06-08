@@ -32,7 +32,7 @@
 
 <style>
     html, body {
-        background-image: url('img/background.png') !important;
+        background-image: url('/img/background.png') !important;
         background-repeat: no-repeat;
         background-attachment: fixed;
         color: #636b6f;
