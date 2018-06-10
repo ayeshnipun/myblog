@@ -9,22 +9,25 @@
                         <h3>{{$post->title}}</h3><br>
                         <p>{!!$post->body!!}</p><br><br><br>
                         <small>Created at {{$post->created_at}}</small>
-                    </div>
+                    </div><br><br><br>
+                    <!--comments display-->
+                    <div class="card-body">
+                        <h2>Comments</h2><br>
+                        @if(count($post->comment)>0)
+                            @foreach($post->comment as $comment)
+                                <div class="comment">
+                                    <p class="cmtname">{{$comment->name}}</p>
+                                    <p style="margin-left:30px;">{{$comment->content}}</p>
+                                </div>
+                            @endforeach
+                        @else
+                            <p>No Comments Yet</p>
+                        @endif  
+                    </div> 
                 </div>
             </div>
-        </div>  
-    </div><br><br><br>
-
-    <!--comments display-->
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            @foreach($post->comment as $comment)
-                <div class="comment">
-                    <p>{{$comment->name}}</p>
-                </div>
-            @endforeach
         </div>
-    </div>
+    </div><br><br><br>
 
 
     <div class="formcstm">
@@ -48,7 +51,12 @@
     </div>
 @endsection
 
-<style>  
+<style>
+    .cmtname{
+        font-size: 24px;
+        font-weight: 100;
+    }
+
     .formcstm{
         padding-left: 30%;
         padding-right: 30%;

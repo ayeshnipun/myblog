@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: url('img/background.png');
+                background-image: url('/img/background.png');
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -62,6 +62,49 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            svg {
+                font: 10.5em 'Raleway';
+                margin: 0 auto;
+            }
+
+            .text-copy {
+                fill: none;
+                stroke: white;
+                stroke-dasharray: 6% 29%;
+                stroke-width: 15px;
+                stroke-dashoffset: 0%;
+                animation: stroke-offset 5.5s infinite linear;
+            }
+
+            .text-copy:nth-child(1){
+            	stroke: #ff0000;
+            	animation-delay: -1;
+            }
+
+            .text-copy:nth-child(2){
+            	stroke: #ffffff;
+            	animation-delay: -2s;
+            }
+
+            .text-copy:nth-child(3){
+            	stroke: #00ff00;
+            	animation-delay: -3s;
+            }
+
+            .text-copy:nth-child(4){
+            	stroke: #00ffff;
+            	animation-delay: -4s;
+            }
+
+            .text-copy:nth-child(5){
+            	stroke: #FDB731;
+            	animation-delay: -5s;
+            }
+
+            @keyframes stroke-offset{
+            	100% {stroke-dashoffset: -35%;}
+            }
         </style>
     </head>
     <body>
@@ -70,8 +113,21 @@
         @section('content')
             <div class="flex-center position-ref full-height">
                 <div class="content">
-                    <div class="title m-b-md">
-                        Laravel
+                    <div>
+                        <svg viewBox="0 0 1060 300">
+                            <symbol id="s-text">
+                                <text text-anchor="middle" x="50%" y="80%">TEC HOUR</text>
+                                
+                            </symbol>
+                    
+                            <g class="g-ants">
+                                <use xlink:href="#s-text" class="text-copy"></use>
+                                <use xlink:href="#s-text" class="text-copy"></use>
+                                <use xlink:href="#s-text" class="text-copy"></use>
+                                <use xlink:href="#s-text" class="text-copy"></use>
+                                <use xlink:href="#s-text" class="text-copy"></use>
+                            </g>
+                        </svg>       
                     </div>
 
                     <div class="links">

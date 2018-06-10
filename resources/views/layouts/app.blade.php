@@ -73,6 +73,8 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- File Manager -->
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script>
         var editor_config = {
