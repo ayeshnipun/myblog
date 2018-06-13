@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-md navbar-light">
+<nav class="navbar navbar-expand-md navbar-light" id="navb">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Tec Hour') }}
@@ -14,7 +14,7 @@
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto topnav-right">
                 <li>
                     <a class="nav-link" href="/blog">Blog</a>
                 </li>
@@ -44,6 +44,7 @@
     .navbar a{
         color: white !important;
         font-size: 25px;
+        
     }
 
     .navbar a:hover{
@@ -64,9 +65,20 @@
 
     .sticky {
         position: fixed;
+        z-index:1;
         top: 0;
         width: 100%
     }
+   
+    /* .navbar{
+        z-index:1;
+        position: fixed;
+    } */
+
+    /* .topnav-right{
+        float: right;
+    } */
+    
 </style>
 
 <script>

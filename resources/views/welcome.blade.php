@@ -7,8 +7,18 @@
 
         <title>Laravel</title>
 
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
+
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -108,9 +118,6 @@
         </style>
     </head>
     <body>
-        @extends('layouts.cstmapp')
-
-        @section('content')
             <div class="flex-center position-ref full-height">
                 <div class="content">
                     <div>
@@ -131,14 +138,13 @@
                     </div>
 
                     <div class="links">
-                        <a href="https://laravel.com/docs">Documentation</a>
-                        <a href="https://laracasts.com">Laracasts</a>
-                        <a href="https://laravel-news.com">News</a>
-                        <a href="https://forge.laravel.com">Forge</a>
-                        <a href="https://github.com/laravel/laravel">GitHub</a>
+                        <a href="/blog">Blog</a>
+                        <a href="/aboutus">About Us</a>
+                        <a href="#">Join Us On Facebook</a>
+                        <a href="/contact">Contact</a>
                     </div>
                 </div>
             </div>
-        @endsection
+        
     </body>
 </html>

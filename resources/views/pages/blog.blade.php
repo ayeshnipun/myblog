@@ -1,8 +1,19 @@
 @extends('layouts.cstmapp')
 
 @section('content')
+
+    {{-- search post --}}
+    <div class="content search-holder" style="z-index:10">
+        <div class="row" style="min-width:330px;">
+              
+            <input type="text" class="form-control input-lg simplebox" id="search" name="search" style="background-color:transparent; border-bottom:thin; border-bottom-color:white !important; text-align:center; color:white; text-transform:uppercase; z-index:1; font-weight:300;" autofocus placeholder="SEARCH FOR POSTS" onclick="" autocomplete="off" />
+              
+        </div>
+    </div>
+      
+
     @if(count($posts) > 0)
-        <div class="container">
+        <div class="container main">
             <div class="row">
                 @foreach($posts as $post)
                     <div class="col-md-6 cstm">
@@ -31,6 +42,18 @@
 @endsection
 
 <style>
+    .search-holder {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .main{
+        padding: 16px;
+        margin-top: 30px !important;
+        height: 1500px;
+    }
+
     .cstm{
         margin-top: 50px;
     }
