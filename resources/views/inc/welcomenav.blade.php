@@ -1,5 +1,6 @@
 
-<nav class="navbar navbar-expand-md navbar-light" id="navb">
+{{-- <nav class="navbar navbar-expand-md navbar-light" id="navb"> --}}
+<nav class="navbar navbar-expand-md">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Tec Hour') }}
@@ -61,6 +62,10 @@
 
 
 <style>
+    .searchBox:focus {
+        background-color: transparent;
+    }
+
     .searchBar{
     }
 
@@ -70,11 +75,11 @@
 
     .searchBtn:hover{
         background-color: transparent;
-        border-color: blue;
+        border-color: red;
     }
     
-    .searchBox:{
-        background-color: transparent !important;
+    .searchBox{
+        background-color: transparent;
     }
 
     .navbar a{
