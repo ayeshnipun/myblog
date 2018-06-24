@@ -134,7 +134,7 @@
                                 <use xlink:href="#s-text" class="text-copy"></use>
                                 <use xlink:href="#s-text" class="text-copy"></use>
                             </g>
-                        </svg>       
+                        </svg>      
                     </div>
 
                     <div class="links">

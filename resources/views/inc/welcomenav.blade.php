@@ -13,8 +13,28 @@
             <ul class="navbar-nav mr-auto">
             </ul>
 
+            {{-- center of navbar --}}
+            <div class="nav-link searchBar">
+                    {!! Form::open(['method'=>'POST', 'class'=> 'form-inline mt-2 mt-md-1']) !!}
+                    <div>
+                        {{Form::text('name', '', ['class'=>'form-control searchBox', 'placeholder'=>'Enter Keywords..'])}}
+                        {{Form::submit('Search', ['class'=>'btn btn-primary searchBtn'])}}
+                    </div>
+                {!! Form::close() !!}
+            </div>
+
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto topnav-right">
+                {{-- <li>
+                    <div class="nav-link searchBar">
+                            {!! Form::open(['method'=>'POST', 'class'=> 'form-inline mt-2 mt-md-0']) !!}
+                            <div>
+                                {{Form::text('name', '', ['class'=>'form-control searchBox', 'placeholder'=>'Enter Keywords..'])}}
+                                {{Form::submit('Search', ['class'=>'btn btn-primary searchBtn'])}}
+                            </div>
+                        {!! Form::close() !!}
+                    </div> 
+                </li> --}}
                 <li>
                     <a class="nav-link" href="/blog">Blog</a>
                 </li>
@@ -22,8 +42,8 @@
                     <a class="nav-link" href="/aboutus">About Us</a>
                 </li>
                 
-                <!--
-                <li class="nav-item dropdown">
+                
+                {{-- <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle compcol" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre onclick="document.getElementById('myDropdown').classList.toggle('show');">
                       Tutorials<span class="caret"></span>
                     </a>
@@ -33,7 +53,7 @@
                         <a class="dropdown-item compcol" href="#">Link 2</a>
                         <a class="dropdown-item compcol" href="#">Link 3</a>
                     </div>
-                </li> -->
+                </li>  --}}
             </ul>
         </div>
     </div>
@@ -41,6 +61,22 @@
 
 
 <style>
+    .searchBar{
+    }
+
+    .searchBtn{
+        background-color: transparent;
+    }
+
+    .searchBtn:hover{
+        background-color: transparent;
+        border-color: blue;
+    }
+    
+    .searchBox:{
+        background-color: transparent !important;
+    }
+
     .navbar a{
         color: white !important;
         font-size: 25px;

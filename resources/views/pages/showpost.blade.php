@@ -65,5 +65,4 @@
     .areacstm{
         height: 20%;
     }
-
 </style>

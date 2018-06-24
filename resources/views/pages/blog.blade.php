@@ -3,13 +3,13 @@
 @section('content')
 
     {{-- search post --}}
-    <div class="content search-holder" style="z-index:10">
+    {{-- <div class="content search-holder" style="z-index:10">
         <div class="row" style="min-width:330px;">
               
             <input type="text" class="form-control input-lg simplebox" id="search" name="search" style="background-color:transparent; border-bottom:thin; border-bottom-color:white !important; text-align:center; color:white; text-transform:uppercase; z-index:1; font-weight:300;" autofocus placeholder="SEARCH FOR POSTS" onclick="" autocomplete="off" />
               
         </div>
-    </div>
+    </div> --}}
       
 
     @if(count($posts) > 0)
@@ -20,7 +20,7 @@
                         <div class="card">
                             <div class="hover01 column" style="width:100%">
                                 <figure>
-                                    <img src="storage/cover_images/{{$post->cover_image}}" style="width:100%">
+                                    <img class="imgCstm" src="storage/cover_images/{{$post->cover_image}}" style="width:100%">
                                 </figure>
                             </div>
                             <a href="/blog/{{$post->id}}" role="button" style="text-decoration: none; color:black;">
@@ -42,6 +42,10 @@
 @endsection
 
 <style>
+    .imgCstm{
+        border-radius: 5px;
+    }
+
     .search-holder {
         position: fixed;
         left: 50%;
