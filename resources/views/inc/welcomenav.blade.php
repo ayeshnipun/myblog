@@ -1,6 +1,6 @@
 
 {{-- <nav class="navbar navbar-expand-md navbar-light" id="navb"> --}}
-<nav class="navbar navbar-expand-md">
+<nav class="navbar navbar-expand-md" id="navb">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Tec Hour') }}
@@ -123,21 +123,20 @@
 </style>
 
 <script>
-    // When the user scrolls the page, execute myFunction 
-    window.onscroll = function() {myFunction()};
-
     // Get the navbar
     var navbar = document.getElementById("navb");
 
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {
+        if(window.pageYOffset > 100){
+            navbar.style.position = "fixed";
+            navbar.style.top = 0;
+        }
+        else{
+            box.style.position = "absolute";
+            box.style.top = 100;
+        }
+    };
 
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-    }
 }
 </script>
