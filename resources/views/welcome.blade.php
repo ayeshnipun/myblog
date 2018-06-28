@@ -140,7 +140,7 @@
                     <div class="links">
                         <a href="/blog">Blog</a>
                         <a href="/aboutus">About Us</a>
-                        <a href="#">Join Us On Facebook</a>
+                        <a href="https://www.facebook.com/TecHour-2092875584315088/">Join Us On Facebook</a>
                         <a href="/contact">Contact</a>
                     </div>
                 </div>
