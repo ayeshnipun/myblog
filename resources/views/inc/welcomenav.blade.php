@@ -1,6 +1,7 @@
 
 {{-- <nav class="navbar navbar-expand-md navbar-light" id="navb"> --}}
-<nav class="navbar navbar-expand-md" id="navbar">
+<div class="nav-wrapper" style="height:80px;">
+<nav class="navbar navbar-expand-md sticky" id="navbar" style="height:80px">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Tec Hour') }}
@@ -26,16 +27,6 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto topnav-right">
-                {{-- <li>
-                    <div class="nav-link searchBar">
-                            {!! Form::open(['method'=>'POST', 'class'=> 'form-inline mt-2 mt-md-0']) !!}
-                            <div>
-                                {{Form::text('name', '', ['class'=>'form-control searchBox', 'placeholder'=>'Enter Keywords..'])}}
-                                {{Form::submit('Search', ['class'=>'btn btn-primary searchBtn'])}}
-                            </div>
-                        {!! Form::close() !!}
-                    </div> 
-                </li> --}}
                 <li>
                     <a class="nav-link" href="/blog">Blog</a>
                 </li>
@@ -59,6 +50,7 @@
         </div>
     </div>
 </nav>
+</div>
 
 
 <style>
@@ -106,10 +98,14 @@
 
     .sticky {
         position: fixed;
+        z-index: 1;
         top: 0;
         width: 100%;
     }
    
+    .appearChanger{
+        color: black !important;
+    }
     /* .navbar{
         z-index:1;
         position: fixed;
@@ -127,24 +123,9 @@
       var sticky = navbar.offsetTop;
       function myFunction() {
           if (window.pageYOffset >= 70) {
-              navbar.classList.add("sticky")
+              navbar.classList.add("appearChanger")
           } else {
-              navbar.classList.remove("sticky");
+              navbar.classList.remove("appearChanger");
           }
       }
-
-//      window.onscroll = changePos;
-//      function changePos() {
-//      var header = document.getElementById("navbar");
-//      var content = document.getElementById("contain");
-//      if (window.pageYOffset > 70) {
-//          navbar.style.position = "fixed";
-//          navbar.style.top = pageYOffset + "px";
-//          contain.style.marginTop = '0px'
-//      } else {
-//          navbar.style.position = "";
-//          navbar.style.top = "";
-//          contain.style.marginTop = '0'
-//      }
-//  }
 </script>
