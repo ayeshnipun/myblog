@@ -13,7 +13,7 @@
       
 
     @if(count($posts) > 0)
-        <div class="container main">
+        <div class="container cstmcont main" id="contain">
             <div class="row">
                 @foreach($posts as $post)
                     <div class="col-md-6 cstm">
@@ -90,5 +90,13 @@
 	    background: #fff;
 	    overflow: hidden;
     }
+
+    /* .cstmcont{
+        padding: 10px;
+    }
+
+    .sticky + .cstmcont {
+        padding-top: 16px;
+    } */
 </style>
 

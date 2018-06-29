@@ -1,6 +1,6 @@
 
 {{-- <nav class="navbar navbar-expand-md navbar-light" id="navb"> --}}
-<nav class="navbar navbar-expand-md" id="navb">
+<nav class="navbar navbar-expand-md" id="navbar">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Tec Hour') }}
@@ -106,9 +106,8 @@
 
     .sticky {
         position: fixed;
-        z-index:1;
         top: 0;
-        width: 100%
+        width: 100%;
     }
    
     /* .navbar{
@@ -123,20 +122,29 @@
 </style>
 
 <script>
-    // Get the navbar
-    var navbar = document.getElementById("navb");
+      window.onscroll = function() {myFunction()};
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      function myFunction() {
+          if (window.pageYOffset >= 70) {
+              navbar.classList.add("sticky")
+          } else {
+              navbar.classList.remove("sticky");
+          }
+      }
 
-    // When the user scrolls the page, execute myFunction 
-    window.onscroll = function() {
-        if(window.pageYOffset > 100){
-            navbar.style.position = "fixed";
-            navbar.style.top = 0;
-        }
-        else{
-            box.style.position = "absolute";
-            box.style.top = 100;
-        }
-    };
-
-}
+//      window.onscroll = changePos;
+//      function changePos() {
+//      var header = document.getElementById("navbar");
+//      var content = document.getElementById("contain");
+//      if (window.pageYOffset > 70) {
+//          navbar.style.position = "fixed";
+//          navbar.style.top = pageYOffset + "px";
+//          contain.style.marginTop = '0px'
+//      } else {
+//          navbar.style.position = "";
+//          navbar.style.top = "";
+//          contain.style.marginTop = '0'
+//      }
+//  }
 </script>
