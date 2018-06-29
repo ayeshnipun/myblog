@@ -17,7 +17,7 @@
 
             {{-- center of navbar --}}
             <div class="nav-link searchBar">
-                    {!! Form::open(['method'=>'POST', 'class'=> 'form-inline mt-2 mt-md-1']) !!}
+                    {!! Form::open(['action' => 'PostsController@search', 'method'=>'POST', 'class'=> 'form-inline mt-2 mt-md-1']) !!}
                     <div>
                         {{Form::text('name', '', ['class'=>'form-control searchBox', 'placeholder'=>'Enter Keywords..'])}}
                         {{Form::submit('Search', ['class'=>'btn btn-primary searchBtn'])}}

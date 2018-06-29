@@ -148,4 +148,16 @@ class PostsController extends Controller
 
         return redirect('/home/posts')->with('success', 'Post Deleted');
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function search($id)
+    {
+        $post = Post::find($id);
+        return view('posts.show')->with('post',$post);
+    }
 }
