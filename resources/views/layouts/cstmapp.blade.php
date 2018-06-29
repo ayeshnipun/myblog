@@ -43,7 +43,7 @@
     }
 
     .navbar{
-        background-color: transparent !important;
+        background-color: transparent;
     }
 </style>
 </html>

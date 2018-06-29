@@ -104,7 +104,7 @@
     }
    
     .appearChanger{
-        color: black !important;
+        background-color: #1f1f14 !important;
     }
     /* .navbar{
         z-index:1;
@@ -122,7 +122,7 @@
       var navbar = document.getElementById("navbar");
       var sticky = navbar.offsetTop;
       function myFunction() {
-          if (window.pageYOffset >= 70) {
+          if (window.pageYOffset >= 150) {
               navbar.classList.add("appearChanger")
           } else {
               navbar.classList.remove("appearChanger");
