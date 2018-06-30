@@ -95,9 +95,13 @@ class PagesController extends Controller
     public function searchPost()
     {
         $key = Input::get('name');
-
-        $posts = Post::where('title', 'LIKE', $key.'%')->get();
-        return view('pages.blog')->with('posts',$posts);
-        
+        if($key != null){
+            $posts = Post::where('title', 'LIKE', $key.'%')->get();
+            if(count($posts)>0){
+                return view('pages.blog')->with('posts',$posts);
+            }
+        }else{    
+            return redirect('blog')->with('error', 'No Keyword is given');
+        }  
     }
 }

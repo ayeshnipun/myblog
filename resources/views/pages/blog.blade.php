@@ -20,7 +20,7 @@
                         <div class="card">
                             <div class="hover01 column" style="width:100%">
                                 <figure>
-                                    <img class="imgCstm" src="storage/cover_images/{{$post->cover_image}}" style="width:100%">
+                                    <img class="imgCstm" src="/storage/cover_images/{{$post->cover_image}}" style="width:100%">
                                 </figure>
                             </div>
                             <a href="/blog/{{$post->id}}" role="button" style="text-decoration: none; color:black;">
