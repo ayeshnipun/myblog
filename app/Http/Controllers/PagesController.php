@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Post;
 
 class PagesController extends Controller
@@ -83,5 +84,20 @@ class PagesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function searchPost()
+    {
+        $key = Input::get('name');
+
+        $posts = Post::where('title', 'LIKE', $key.'%')->get();
+        return view('pages.blog')->with('posts',$posts);
+        
     }
 }

@@ -155,9 +155,8 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function search($id)
+    public function search()
     {
-        $post = Post::find($id);
-        return view('posts.show')->with('post',$post);
+        return view('posts.index');
     }
 }

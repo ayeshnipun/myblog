@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,11 @@ Route::get('/', function () {
 Route::get('/aboutus', function () {
     return view('pages.aboutus');
 });
+
+// Route::post('/search', function () {
+//     $q = Input::get('name');
+//     dd($d);
+// });
 
 
 Route::get('/blog', 'PagesController@index');
@@ -41,3 +47,6 @@ Route::resource('blog', 'PagesController');
 
 //comments
 Route::post('comments/{post_id}', ['uses'=>'CommentsController@store', 'as'=>'comments.store']);
+
+
+Route::post('/blog/search/', ['uses'=>'PagesController@searchPost', 'as'=>'pages.searchPost']);
