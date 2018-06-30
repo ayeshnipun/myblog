@@ -27,7 +27,8 @@
                                 <div class="card-body text-center">
                                     <h3>{!! $post->title !!}</h3><br>
                                     <small>Type : {{$post->type}}</small><br>
-                                    <small>Created at {{$post->created_at}}</small>
+                                    <small>Created on: {{ date('F d, Y', strtotime($post->created_at)) }}</small>
+                                    {{-- <small>Created at {{$post->created_at->toDayDateTimeString()}}</small> --}}
                                 </div>
                             </a>
                         </div>

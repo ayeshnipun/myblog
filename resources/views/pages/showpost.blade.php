@@ -6,19 +6,19 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <h3>{{$post->title}}</h3><br>
-                        <p>{!!$post->body!!}</p><br><br><br>
-                        <small>Created at {{$post->created_at}}</small>
+                        <h3 class="postTitle text-center">{{$post->title}}</h3><br>
+                        <div class="postBody">{!!$post->body!!}</div><br><br><br>
+                        <small>Created on: {{ date('F d, Y', strtotime($post->created_at)) }}</small>
                     </div><br><br><br>
                     <!--comments display-->
                     <div class="card-body">
-                        <h2>Comments</h2><br>
+                        <h2 class="cmntText">Comments</h2><br>
                         @if(count($post->comment)>0)
                             @foreach($post->comment as $comment)
                                 <div class="comment">
                                     <p class="cmtname">{{$comment->name}}</p>
                                     <p style="margin-left:30px;">{{$comment->content}}</p>
-                                </div>
+                                </div><br>
                             @endforeach
                         @else
                             <p>No Comments Yet</p>
@@ -52,8 +52,13 @@
 @endsection
 
 <style>
+    .comment{
+        margin-left: 30px;
+    }
+
     .cmtname{
-        font-size: 24px;
+        font-size: 22px;
+        color: black;
         font-weight: 100;
     }
 
@@ -64,5 +69,17 @@
 
     .areacstm{
         height: 20%;
+    }
+
+    .postTitle{
+        margin-top: 20px;
+        font-size: 40px;
+        color: black;
+    }
+
+    .postBody{
+        margin-top: 20px;
+        font-size: 20px !important;
+        color: black !important;
     }
 </style>
