@@ -32,18 +32,20 @@
                             </a>
                         </div>
                     </div> --}}
-                    <div class="card mb-3">
-                        <div class="hover01 column bot-crop">
-                            <figure>
-                                <img class="card-img-top" src="/storage/cover_images/{{$post->cover_image}}" alt="Coverimage">
-                            </figure>
+                    <a href="/blog/{{$post->id}}" role="button" style="text-decoration: none; color:black;">
+                        <div class="card mb-3">
+                            <div class="hover01 column bot-crop">
+                                <figure>
+                                    <img class="card-img-top" src="/storage/cover_images/{{$post->cover_image}}" alt="Coverimage">
+                                </figure>
+                            </div>
+                            <div class="card-body">
+                                <h3>{!! $post->title !!}</h3>
+                                <p><small>Type : {{$post->type}}</small>
+                                <small class="float-right">Created on: {{ date('F d, Y', strtotime($post->created_at)) }}</small></p>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h3>{!! $post->title !!}</h3><br>
-                            <small>Type : {{$post->type}}</small><br>
-                            <small>Created on: {{ date('F d, Y', strtotime($post->created_at)) }}</small>
-                        </div>
-                    </div>
+                    </a><br><br>
                 @endforeach   
                 <br><br>
             </div>
@@ -55,7 +57,7 @@
 
 <style>
     .bot-crop{ 
-        max-width: auto; 
+        max-width:auto; 
         overflow: hidden; 
     }
 
@@ -65,6 +67,7 @@
 
     .card{
         height: 400px;
+        margin-bottom: 30px !important;
     }
 
     .card-img-top{
