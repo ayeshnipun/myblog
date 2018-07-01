@@ -33,13 +33,17 @@
                         </div>
                     </div> --}}
                     <div class="card mb-3">
-                            <img class="card-img-top" src="/storage/cover_images/{{$post->cover_image}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">{!! $post->title !!}</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                          </div>
+                        <div class="hover01 column bot-crop">
+                            <figure>
+                                <img class="card-img-top" src="/storage/cover_images/{{$post->cover_image}}" alt="Coverimage">
+                            </figure>
+                        </div>
+                        <div class="card-body">
+                            <h3>{!! $post->title !!}</h3><br>
+                            <small>Type : {{$post->type}}</small><br>
+                            <small>Created on: {{ date('F d, Y', strtotime($post->created_at)) }}</small>
+                        </div>
+                    </div>
                 @endforeach   
                 <br><br>
             </div>
@@ -50,12 +54,21 @@
 @endsection
 
 <style>
-    .card{
-        height: 302px;
+    .bot-crop{ 
+        max-width: auto; 
+        overflow: hidden; 
     }
 
-    .card-body{
-        margin-left: 500px;
+    .bot-crop img{ 
+        max-width: initial; /* Maybe optional. See note below */ 
+    }
+
+    .card{
+        height: 400px;
+    }
+
+    .card-img-top{
+        height: auto;
     }
 
     .imgCstm{
@@ -99,7 +112,7 @@
     }
 
     figure {
-	    width: 50%;
+	    width: 100%;
 	    height: auto;
 	    margin: 0;
 	    padding: 0;
