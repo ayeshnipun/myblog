@@ -13,10 +13,10 @@
       
 
     @if(count($posts) > 0)
-        <div class="container cstmcont main" id="contain">
-            <div class="row">
+        <div class="container main" id="contain">
+            <div class="column">
                 @foreach($posts as $post)
-                    <div class="col-md-6 cstm">
+                    <div class="cstm">
                         <div class="card">
                             <div class="hover01 column" style="width:100%">
                                 <figure>
@@ -43,6 +43,14 @@
 @endsection
 
 <style>
+    .card{
+        height: 302px;
+    }
+
+    .card-body{
+        margin-left: 500px;
+    }
+
     .imgCstm{
         border-radius: 5px;
     }
@@ -64,7 +72,7 @@
     }
 
     img {
-        width: 100%;
+        width: 90%;
         height: 300px;
     }
     .hover01 figure img {
@@ -84,7 +92,7 @@
     }
 
     figure {
-	    width: 100%;
+	    width: 50%;
 	    height: auto;
 	    margin: 0;
 	    padding: 0;
