@@ -100,8 +100,11 @@ class PagesController extends Controller
             if(count($posts)>0){
                 return view('pages.blog')->with('posts',$posts);
             }
+            else{
+                return view('pages.blog')->with('posts',$posts);
+            }
         }else{    
-            return redirect('blog')->with('error', 'No Keyword is given');
+            return redirect('/blog')->with('error', 'No Keyword is given');
         }  
     }
 }
