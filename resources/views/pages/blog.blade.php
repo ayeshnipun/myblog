@@ -11,9 +11,8 @@
         </div>
     </div> --}}
       
-
-    @if(count($posts) > 0)
-        <div class="container main" id="contain">
+    <div class="container main" id="contain">
+        @if(count($posts) > 0)
             <div class="column">
                 @foreach($posts as $post)
                     {{-- <div class="cstm">
@@ -49,13 +48,17 @@
                 @endforeach   
                 <br><br>
             </div>
-        </div>
-    @else
-        <h2>No post Found</h2>
-    @endif
+        @else
+            <h2 class="noPost">Sorry.. No post Found</h2>
+        @endif
+    </div>
 @endsection
 
 <style>
+    .noPost{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
     .bot-crop{ 
         max-width:auto; 
         overflow: hidden; 
