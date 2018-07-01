@@ -16,23 +16,30 @@
         <div class="container main" id="contain">
             <div class="column">
                 @foreach($posts as $post)
-                    <div class="cstm">
-                        <div class="card">
-                            <div class="hover01 column" style="width:100%">
+                    {{-- <div class="cstm">
+                        <div class="card row">
+                            <div class="hover01 column" style="width:80%">
                                 <figure>
                                     <img class="imgCstm" src="/storage/cover_images/{{$post->cover_image}}" style="width:100%">
                                 </figure>
                             </div>
                             <a href="/blog/{{$post->id}}" role="button" style="text-decoration: none; color:black;">
-                                <div class="card-body text-center">
+                                <div class="card-body text-center col-4">
                                     <h3>{!! $post->title !!}</h3><br>
                                     <small>Type : {{$post->type}}</small><br>
                                     <small>Created on: {{ date('F d, Y', strtotime($post->created_at)) }}</small>
-                                    {{-- <small>Created at {{$post->created_at->toDayDateTimeString()}}</small> --}}
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
+                    <div class="card mb-3">
+                            <img class="card-img-top" src="/storage/cover_images/{{$post->cover_image}}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">{!! $post->title !!}</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
                 @endforeach   
                 <br><br>
             </div>
@@ -72,7 +79,7 @@
     }
 
     img {
-        width: 90%;
+        width: 80%;
         height: 300px;
     }
     .hover01 figure img {
