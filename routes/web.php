@@ -20,6 +20,10 @@ Route::get('/aboutus', function () {
     return view('pages.aboutus');
 });
 
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
+
 // Route::post('/search', function () {
 //     $q = Input::get('name');
 //     dd($d);
