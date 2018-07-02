@@ -24,6 +24,7 @@
         <!-- Styles -->
         <style>
             html, body {
+                overflow: hidden;
                 background-image: url('/img/background.png');
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
@@ -129,7 +130,7 @@
                     <div>
                         <p>
                             <h1 class="animh1" data-heading1="T" data-heading2="o">Tec</h1>
-                            <h1 class="animh2" data-heading2="o">Hour</h1>
+                            <h1 class="animh2" data-heading2="ou">Hour</h1>
                         </p>
                         
                         {{-- <h1 class="animh2" data-heading2="o">Ho</h1>

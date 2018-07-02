@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container text-center">
-    <p class="fbTxt">Click <a class="fbLink" href="http://">here</a> to join us with facebook</p>
+    <p class="fbTxt">Click <a class="fbLink" href="https://www.facebook.com/TecHour-2092875584315088/">here</a> to join us with facebook</p>
     <p class="txtOR">OR</p>
     <p class="emailTxt">Email us @ <span>nipun.yesh@gmail.com</span></p>
 </div>
@@ -17,11 +17,11 @@
     }
 
     .fbLink{
-        color: brown;
+        color: aqua;
     }
 
     .fbLink:hover{
-        color: brown;
+        color: #3333ff;
         text-decoration: none;
     }
 
