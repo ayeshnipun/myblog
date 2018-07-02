@@ -62,7 +62,7 @@
             }
             
             .links{
-                margin-top: 40%;
+                margin-top: 10%;
             }
 
             .links > a {
@@ -127,9 +127,13 @@
             <div class="flex-center position-ref full-height">
                 <div class="content">
                     <div>
-                        <h1 class="animh1" data-heading1="T">Tec</h1>
-                        <h1 class="animh2" data-heading2="o">Ho</h1>
-                        <h1 class="animh3" data-heading3="r">ur</h1>
+                        <p>
+                            <h1 class="animh1" data-heading1="T" data-heading2="o">Tec</h1>
+                            <h1 class="animh2" data-heading2="o">Hour</h1>
+                        </p>
+                        
+                        {{-- <h1 class="animh2" data-heading2="o">Ho</h1>
+                        <h1 class="animh3" data-heading3="r">ur</h1> --}}
                         {{-- <svg viewBox="0 0 1060 200">
                             <symbol id="s-text">
                                 <text text-anchor="middle" x="50%" y="80%">TEC HOUR</text> 

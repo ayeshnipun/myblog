@@ -10,12 +10,7 @@ h1 {
 	text-align: center;
 	line-height: 1;
 	margin: 0;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	position: absolute;
 	color: #2e2e1f;
-	letter-spacing: -1rem;
 	
 }
 
@@ -29,7 +24,7 @@ h1::before{
 	text-align: left;
 	animation: flicker 3s linear infinite;
 }
-
+/* 
 .animh3{
 	top: 50%;
 	left: 58%;
@@ -45,17 +40,12 @@ h1::before{
 	text-shadow: none;
 	text-align: left;
 	animation: flicker 3s linear infinite;
-}
-
-.animh2{
-	top: 50%;
-	left: 42%;
-}
+} */
 
 .animh2::before{
 	content: attr(data-heading2);
 	position: absolute;
-	left: 47%;
+	left: 40.4%;
 	overflow: hidden;
 	color: #ff0000;
 	width: 100%;
