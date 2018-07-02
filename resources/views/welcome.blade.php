@@ -19,28 +19,10 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/welcomeAnim.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/anim.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
-            @font-face {
-	font-family: 'CoreCircus2DDot1';
-	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.eot');
-	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'CoreCircus';
-	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot');
-	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype');
-}
-            /* {
-                $h1:  rgba(45,45,45,1);
-                $blue: #98b5cc;
-                $yellow: #ffcc00;
-                $outline: rgba(#fff, .4);
-                $shadow: rgba($yellow, .5);
-            } */
             html, body {
                 background-image: url('/img/background.png');
                 color: #636b6f;
@@ -77,6 +59,10 @@
 
             .title {
                 font-size: 84px;
+            }
+            
+            .links{
+                margin-top: 40%;
             }
 
             .links > a {
@@ -134,52 +120,16 @@
 
             @keyframes stroke-offset{
             	100% {stroke-dashoffset: -35%;}
-            }    
-
-            h1 {
-	            font-family: 'CoreCircus', sans-serif;
-	            font-size: 14vw;
-	            text-align: center;
-	            line-height: 1;
-	            margin: 0;
-	            top: 50%;
-	            left: 50%;
-	            transform: translate(-50%, -50%);
-	            position: absolute;
-	            color: rgba(45,45,45,1);
-	            letter-spacing: -.5rem;
-	
-	            &:before {
-		            content: attr(data-heading);
-		            position: absolute;
-		            overflow: hidden;
-		            color: #ffcc00;
-		            width: 100%;
-		            z-index: 5;
-		            text-shadow: none;
-		            left: 27%;
-		            text-align: left;
-		            animation: flicker 3s linear infinite;
-	            }
-            }
-
-            @keyframes flicker {
-            	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-            		opacity: .99;
-            		text-shadow: -1px -1px 0 rgba(#fff, .4), 1px -1px 0 rgba(#fff, .4), -1px 1px 0 rgba(#fff, .4), 1px 1px 0 rgba(#fff, .4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
-            	}
-            	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-            		opacity: 0.4;
-            		text-shadow: none;
-            	}
-            } 
+            }     
         </style>
     </head>
     <body>
             <div class="flex-center position-ref full-height">
                 <div class="content">
                     <div>
-                        <h1 data-heading="i">Flicker</h1>
+                        <h1 class="animh1" data-heading1="T">Tec</h1>
+                        <h1 class="animh2" data-heading2="o">Ho</h1>
+                        <h1 class="animh3" data-heading3="r">ur</h1>
                         {{-- <svg viewBox="0 0 1060 200">
                             <symbol id="s-text">
                                 <text text-anchor="middle" x="50%" y="80%">TEC HOUR</text> 
