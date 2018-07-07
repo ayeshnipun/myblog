@@ -13,7 +13,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3>{{$comment->content}}</h3><br>
-                                <small>Atricle - </small><br>
+                                <small>Atricle - {{$comment->name}}</small><br>
                                 <small>Comment by {{$comment->name}}</small><br>
                                 <small>Commented on {{$comment->created_at}}</small>
                             </div>

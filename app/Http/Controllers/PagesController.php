@@ -96,7 +96,7 @@ class PagesController extends Controller
     {
         $key = Input::get('name');
         if($key != null){
-            $posts = Post::where('title', 'LIKE', $key.'%')->get();
+            $posts = Post::where('title', 'LIKE', $key.'%')->paginate(5);
             if(count($posts)>0){
                 return view('pages.blog')->with('posts',$posts);
             }
