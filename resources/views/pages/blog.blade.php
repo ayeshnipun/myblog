@@ -15,22 +15,6 @@
         @if(count($posts) > 0)
             <div class="column">
                 @foreach($posts as $post)
-                    {{-- <div class="cstm">
-                        <div class="card row">
-                            <div class="hover01 column" style="width:80%">
-                                <figure>
-                                    <img class="imgCstm" src="/storage/cover_images/{{$post->cover_image}}" style="width:100%">
-                                </figure>
-                            </div>
-                            <a href="/blog/{{$post->id}}" role="button" style="text-decoration: none; color:black;">
-                                <div class="card-body text-center col-4">
-                                    <h3>{!! $post->title !!}</h3><br>
-                                    <small>Type : {{$post->type}}</small><br>
-                                    <small>Created on: {{ date('F d, Y', strtotime($post->created_at)) }}</small>
-                                </div>
-                            </a>
-                        </div>
-                    </div> --}}
                     <a href="/blog/{{$post->id}}" role="button" style="text-decoration: none; color:black;">
                         <div class="card mb-3">
                             <div class="hover01 column bot-crop">
@@ -45,9 +29,10 @@
                             </div>
                         </div>
                     </a><br><br>
-                @endforeach   
+                @endforeach
                 <br><br>
-            </div>
+            </div>  
+            {{ $posts->links() }}
         @else
             <h2 class="noPost">Sorry.. No post Found</h2>
         @endif
