@@ -38,8 +38,9 @@
          
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                    {{-- {{ config('app.name', 'Laravel') }} --}}
+                    Dashboard
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -48,6 +49,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <a class="nav-link" href="/">Visit Site</a>
                         <a class="nav-link" href="/home/posts">Posts</a>
                         <a class="nav-link" href="/home/comments">Comments</a>
                     </ul>
