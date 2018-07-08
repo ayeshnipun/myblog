@@ -22,20 +22,6 @@
 </head>
 <body>
     <div id="app">
-
-        {{-- sidebar --}}
-        {{-- <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="nav-link" href="/home/posts">Posts</a>
-                <a class="nav-link" href="/home/comments">Comments</a>
-            <a href="#" class="w3-bar-item w3-button">Link 3</a>
-        </div> --}}
-         
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
@@ -49,9 +35,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <a class="nav-link" href="/">Visit Site</a>
                         <a class="nav-link" href="/home/posts">Posts</a>
                         <a class="nav-link" href="/home/comments">Comments</a>
+                        <a class="nav-link" href="/">Visit Site</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -131,9 +117,28 @@
 </body>
 
 <style>
-    .navbar{
-        background-color: transparent !important;
+    nav a{
+        color: white !important;
     }
+
+    nav a:hover{
+        color: white !important;
+        opacity: 0.5;
+    }
+
+    .dropdown-menu{
+        background-color: #262626 !important;
+    }    
+
+    .dropdown-item:hover{
+        background-color: #262626;
+        opacity: 0.5;
+    }
+
+    .navbar{
+        background-color: #262626 !important;
+    }
+
     .nav a.active {
         background-color: #f7f8fa;
         color: #019fc2;
