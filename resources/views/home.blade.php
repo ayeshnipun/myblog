@@ -15,9 +15,16 @@
                     @endif
 
                     You are logged in!
+                        <br><br>
+                    {{-- <input type="button" value="Add Post" class="btn btn-default" role="link"> --}}
+                    <a href="/home/posts/create" role="button" class="btn btn-primary">Add Post</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+<style>
+   
+</style>
