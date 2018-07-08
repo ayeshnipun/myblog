@@ -2,9 +2,12 @@
 
 @section('content')
     <div class="col-md-8">
-        <h2>Welcome {{ Auth::user()->name }}</h2>
+        <h2 class="cmntwlcmtxt">Welcome {{ Auth::user()->name }}</h2>
     </div>
-    <h1 class="row justify-content-center">COMMENTS</h1><br>
+    <div>
+        <h1 class="row justify-content-center">COMMENTS</h1>
+    </div>
+    <br>
     @if(count($comments) > 0)
         @foreach($comments as $comment)
             <div class="container">
@@ -13,9 +16,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3>{{$comment->content}}</h3><br>
-                                <small>Atricle - {{$comment->post}}</small><br>
-                                <small>Comment by {{$comment->name}}</small><br>
-                                <small>Commented on {{$comment->created_at}}</small>
+                                <small>Atricle - </small><br>
+                                <small>Comment by {!! $comment->name !!}</small><br>
+                                <small>Commented on {!! $comment->created_at !!}</small>
                             </div>
                         </div>
                     </div>
@@ -28,6 +31,10 @@
 @endsection
 
 <style>
+    .cmntwlcmtxt{
+        color: aliceblue;
+    }
+
     .custom{
         padding-top: 10px !important;
         padding-bottom: 10px !important;

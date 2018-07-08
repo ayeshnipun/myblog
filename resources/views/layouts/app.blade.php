@@ -117,6 +117,10 @@
 </body>
 
 <style>
+    html, body {
+        background-image: url('/img/background.png');   
+    }
+
     nav a{
         color: white !important;
     }

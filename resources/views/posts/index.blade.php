@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="col-md-8">
+    <div class="col-md-8 welcomtxt">
         <h2>Welcome {{ Auth::user()->name }}</h2>
     </div>
 
     <div class="text-center">
-        <h1>POSTS</h1>
+        <h1 class="poststxt">POSTS</h1>
         <a role="button" href="/home/posts/create" class="btn btn-primary">New Post</a><br><br>
     </div><br>
     @if(count($posts) > 0)
@@ -39,6 +39,14 @@
 @endsection
 
 <style>
+    .welcomtxt{
+        color: aliceblue;
+    }
+
+    .poststxt{
+        color: aliceblue;
+    }
+
     .btnlocation{
         position: relative;
         top: 10px;
