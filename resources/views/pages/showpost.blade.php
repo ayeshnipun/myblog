@@ -7,11 +7,17 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="postTitle text-center">{{$post->title}}</h3><br>
-                        <div class="postBody">{!!$post->body!!}</div><br><br><br>
+                        <div class="postBody">{!!$post->body!!}</div><br><br>
                         <small>Created on: {{ date('F d, Y', strtotime($post->created_at)) }}</small>
-                    </div><br><br><br>
+                    </div><br><br><br><br>
+                    <div class="social-share col-md-12">
+                        <br>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" target="_blank" role="button" class="btn btn-default shareBtn">Share on Facebook</a>
+                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(Request::fullUrl()) }}" target="_blank" role="button" class="btn btn-default shareBtn">Share on Twitter</a>
+                    </div>
                     <!--comments display-->
                     <div class="card-body">
+                        <br>
                         <h2 class="cmntText">Comments</h2><br>
                         @if(count($post->comment)>0)
                             @foreach($post->comment as $comment)
@@ -52,6 +58,16 @@
 @endsection
 
 <style>
+    .shareBtn{
+        background-color: #e0e0d1;
+        color: #2e2e1f;
+    }
+
+    .shareBtn:hover{
+        background-color: #4d4d33;
+        color: #2e2e1f;
+    }
+
     .comment{
         margin-left: 30px;
     }
@@ -83,3 +99,27 @@
         color: black !important;
     }
 </style>
+
+<script>
+    var popupMeta = {
+    width: 400,
+    height: 400
+}
+$(document).on('click', '.social-share', function(event){
+    event.preventDefault();
+
+    var vPosition = Math.floor(($(window).width() - popupMeta.width) / 2),
+        hPosition = Math.floor(($(window).height() - popupMeta.height) / 2);
+
+    var url = $(this).attr('href');
+    var popup = window.open(url, 'Social Share',
+        'width='+popupMeta.width+',height='+popupMeta.height+
+        ',left='+vpPsition+',top='+hPosition+
+        ',location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1');
+
+    if (popup) {
+        popup.focus();
+        return false;
+    }
+});
+</script>
