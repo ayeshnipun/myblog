@@ -5,14 +5,14 @@
         <h2 class="cmntwlcmtxt">Welcome {{ Auth::user()->name }}</h2>
     </div>
     <div>
-        <h1 class="row justify-content-center">COMMENTS</h1>
+        <h1 class="row cmnttxt justify-content-center">COMMENTS</h1>
     </div>
     <br>
     @if(count($comments) > 0)
-        @foreach($comments as $comment)
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    @foreach($comments as $comment)
                         <div class="card">
                             <div class="card-body">
                                 <h3>{{$comment->content}}</h3><br>
@@ -20,17 +20,21 @@
                                 <small>Comment by {!! $comment->name !!}</small><br>
                                 <small>Commented on {!! $comment->created_at !!}</small>
                             </div>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-        @endforeach
+                        </div><br><br>
+                    @endforeach
+                </div>
+            </div>  
+        </div>   
     @else
         <h3>No Post Found</h3>
     @endif
 @endsection
 
 <style>
+    .cmnttxt{
+        color: aliceblue;
+    }
+
     .cmntwlcmtxt{
         color: aliceblue;
     }

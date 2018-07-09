@@ -22,7 +22,8 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <div class="nav-wrapper" style="height:80px;">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel sticky" id="navbar" style="height:80px">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     {{-- {{ config('app.name', 'Laravel') }} --}}
@@ -37,7 +38,7 @@
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-link" href="/home/posts">Posts</a>
                         <a class="nav-link" href="/home/comments">Comments</a>
-                        <a class="nav-link" href="/">Visit Site</a>
+                        <a class="nav-link" href="/">My Site</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -69,6 +70,7 @@
                 </div>
             </div>
         </nav>
+        </div>
 
         <main class="py-4">
             @include('inc.mes')
@@ -118,7 +120,7 @@
 
 <style>
     html, body {
-        background-image: url('/img/background.png');   
+        background-image: url('/img/background.png');
     }
 
     nav a{
@@ -148,5 +150,29 @@
         color: #019fc2;
         cursor: default;
     }
+
+    .sticky {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        width: 100%;
+    }
+   
+    .appearChanger{
+        background-color: #1f1f14 !important;
+    }
 </style>
+
+<script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= 150) {
+                navbar.classList.add("appearChanger")
+            } else {
+                navbar.classList.remove("appearChanger");
+            }
+        }
+  </script>
 </html>
