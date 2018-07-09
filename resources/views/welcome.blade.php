@@ -129,8 +129,8 @@
                 <div class="content">
                     <div>
                         <p>
-                            <h1 class="animh1" data-heading1="T" data-heading2="o">Tec</h1>
-                            <h1 class="animh2" data-heading2="ou">Hour</h1>
+                            <h1 class="animh1" data-heading1="Tec" data-heading2="o">Tec</h1>
+                            <h1 class="animh2" data-heading2="Hour">Hour</h1>
                         </p>
                         
                         {{-- <h1 class="animh2" data-heading2="o">Ho</h1>

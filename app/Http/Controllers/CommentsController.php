@@ -45,24 +45,9 @@ class CommentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $post_id)
+    public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'content' => 'required',
-            'email' => 'required'
-        ]);
-
-        $post = Post::find($post_id);
-
-        $comment = new Commentt;
-        $comment->name = $request->input('name');
-        $comment->content = $request->input('content');
-        $comment->email = $request->input('email');
-        $comment->post()->associate($post);
-        $comment->save();
-
-        return redirect('/blog')->with('success', 'Success');
+        
     }
 
     /**

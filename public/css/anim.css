@@ -45,7 +45,7 @@ h1::before{
 .animh2::before{
 	content: attr(data-heading2);
 	position: absolute;
-	left: 40.4%;
+	left: 31.4%;
 	overflow: hidden;
 	color: #ff0000;
 	width: 100%;

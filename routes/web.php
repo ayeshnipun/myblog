@@ -50,7 +50,7 @@ Route::resource('comments', 'CommentsController');
 Route::resource('blog', 'PagesController');
 
 //comments
-Route::post('comments/{post_id}', ['uses'=>'CommentsController@store', 'as'=>'comments.store']);
+Route::post('comments/{post_id}', ['uses'=>'PagesController@store', 'as'=>'comments.store']);
 
 
 Route::post('/blog/search/', ['uses'=>'PagesController@searchPost', 'as'=>'pages.searchPost']);
