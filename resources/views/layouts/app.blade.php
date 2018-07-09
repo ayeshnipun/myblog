@@ -121,6 +121,7 @@
 <style>
     html, body {
         background-image: url('/img/background.png');
+        background-attachment: fixed;
     }
 
     nav a{
