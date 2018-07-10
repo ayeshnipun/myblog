@@ -1,17 +1,17 @@
 <?php
 
-namespace App;
+namespace TecHour;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Commentt; 
+use TecHour\Commentt; 
 
 class Post extends Model
 {
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('TecHour\User');
     }
 
     public function comment(){
-        return $this->hasMany('App\Commentt');
+        return $this->hasMany('TecHour\Commentt');
     }
 }

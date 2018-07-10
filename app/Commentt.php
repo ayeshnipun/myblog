@@ -1,13 +1,13 @@
 <?php
 
-namespace App;
+namespace TecHour;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Post;
+use TecHour\Post;
 
 class Commentt extends Model
 {
     public function post(){
-        return $this->belongsTo('App\Post');
+        return $this->belongsTo('TecHour\Post');
     }
 }

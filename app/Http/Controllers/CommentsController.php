@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace TecHour\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Commentt;
-use App\Post;
+use TecHour\Commentt;
+use TecHour\Post;
 
 class CommentsController extends Controller
 {

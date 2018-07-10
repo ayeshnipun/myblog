@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace TecHour\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
-use App\User;
+use TecHour\Post;
+use TecHour\User;
 
 class PostsController extends Controller
 {

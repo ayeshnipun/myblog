@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace TecHour\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
-use App\Post;
-use App\Commentt;
+use TecHour\Post;
+use TecHour\Commentt;
 
 class PagesController extends Controller
 {

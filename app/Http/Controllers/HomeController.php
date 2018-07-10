@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace TecHour\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use TecHour\User;
 
 class HomeController extends Controller
 {
