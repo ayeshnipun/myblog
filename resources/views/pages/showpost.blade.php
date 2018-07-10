@@ -51,23 +51,13 @@
                 {{Form::textarea('content', '', ['class'=>'form-control areacstm', 'placeholder'=>'Comment'])}}
             </div><br><br>
             <div>
-                {{Form::submit('Submit', ['class'=>'btn btn-download'])}}
+                {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
             </div>
         {!! Form::close() !!}
     </div>
 @endsection
 
 <style>
-    .btn-download{
-        -moz-border-radius: 0px !important;
-        -webkit-border-radius: 0px !important;
-        border-radius: 0px !important;
-    }
-
-    .btn-download:hover{
-        transition: .3s all !important;
-    }
-
     .shareBtn{
         background-color: #e0e0d1;
         color: #2e2e1f;
