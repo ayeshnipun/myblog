@@ -31,6 +31,14 @@
 @endsection
 
 <style>
+    h1{
+        color: whitesmoke !important;
+    }
+
+    form label{
+        color: aliceblue !important;
+    }
+
     .formcstm{
         padding-left: 15%;
         padding-right: 15%;
