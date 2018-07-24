@@ -77,6 +77,11 @@
                 text-transform: uppercase;
             }
 
+            .link > a {
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -122,45 +127,74 @@
 
             @keyframes stroke-offset{
             	100% {stroke-dashoffset: -35%;}
-            }     
+            }  
+
+            .aboutUS{
+                margin-top: 15%;
+            }  
+
+            .Title{
+                color: white;
+            } 
+
+            .link{
+                text-decoration: none;
+            }
         </style>
     </head>
     <body>
-            <div class="flex-center position-ref full-height">
-                <div class="content">
-                    <div>
-                        <p>
-                            <h1 class="animh1" data-heading1="Tec" data-heading2="o">Tec</h1>
-                            <h1 class="animh2" data-heading2="Hour">Hour</h1>
-                        </p>
-                        
-                        {{-- <h1 class="animh2" data-heading2="o">Ho</h1>
-                        <h1 class="animh3" data-heading3="r">ur</h1> --}}
-                        {{-- <svg viewBox="0 0 1060 200">
-                            <symbol id="s-text">
-                                <text text-anchor="middle" x="50%" y="80%">TEC HOUR</text> 
-                                
-                            </symbol>
-                    
-                            <g class="g-ants">
-                                <use xlink:href="#s-text" class="text-copy"></use>
-                                <use xlink:href="#s-text" class="text-copy"></use>
-                                <use xlink:href="#s-text" class="text-copy"></use>
-                                <use xlink:href="#s-text" class="text-copy"></use>
-                                <use xlink:href="#s-text" class="text-copy"></use>
-                            </g>
-                        </svg>       --}}
-                    </div>
-
-                    <div class="links">
-                        <a href="/blog">Blog</a>
-                        <a href="/aboutus">About Us</a>
-                        <a href="https://www.facebook.com/TecHour-2092875584315088/">Join Us On Facebook</a>
-                        <a href="/contact">Contact</a>
-                    </div>
-                    
+        <div class="flex-center position-ref full-height" style="height:100%">
+            <div class="content">
+                <div>
+                    <p>
+                        <h1 class="animh1" data-heading1="Tec" data-heading2="o">Tec</h1>
+                        <h1 class="animh2" data-heading2="Hour">Hour</h1>
+                    </p>  
                 </div>
+                <div class="links">
+                    <a href="/blog">Blog</a>
+                    <a href="/aboutus">About Us</a>
+                    <a href="https://www.facebook.com/TecHour-2092875584315088/">Join Us On Facebook</a>
+                    <a href="/contact">Contact</a>
+                </div>    
             </div>
-            
+        </div>
+
+        <div class="whatAbout text-center" style="height:100%">
+            <h2 class="Title">What Is This About</h2>
+            <div>
+                <p>
+                    This is s blog, that made to give you some knowledge about many fields in the world.
+                </p>
+                <p class="link">
+                    <a href="/blog">Click Here</a> to read out posts.
+                </p>
+            </div>   
+        </div>
+
+        {{-- <div class="aboutUS text-center" style="height:100%">
+            <h2 class="Title">About Us</h2>
+            <div>
+                <p class="part1">
+                        Hey there...
+                </p>
+                <p class="part2">
+                    I'am Ayesh nipun. An undergraduate at UCSC (University of colombo School of Computing) <br>        
+                </p>
+            </div>   
+        </div> --}}
+
+        <div class="reachUS text-center" style="height:100%">
+            <h2 class="Title">Reach Us</h2>
+            <div>
+                <p class="link">
+                    <a href="https://www.facebook.com/TecHour-2092875584315088/">Click here</a> to join Us On Facebook.
+                </p>
+                OR <br><br>
+                <p>
+                    email us at <span>nipun.yesh@gmail.com</span>
+                </p>
+            </div>   
+        </div>
     </body>
 </html>
