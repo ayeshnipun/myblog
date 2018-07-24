@@ -24,7 +24,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                overflow: hidden;
+                max-width: 100%;
+                overflow-x: hidden;
                 background-image: url('/img/background.png');
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
@@ -157,9 +158,9 @@
                         <a href="https://www.facebook.com/TecHour-2092875584315088/">Join Us On Facebook</a>
                         <a href="/contact">Contact</a>
                     </div>
-
+                    
                 </div>
             </div>
-        
+            
     </body>
 </html>
