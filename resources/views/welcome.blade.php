@@ -21,6 +21,8 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/anim.css') }}" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <!-- Styles -->
         <style>
             html, body {
@@ -152,10 +154,10 @@
                     </p>  
                 </div>
                 <div class="links">
-                    <a href="/blog">Blog</a>
-                    <a href="/aboutus">About Us</a>
-                    <a href="https://www.facebook.com/TecHour-2092875584315088/">Join Us On Facebook</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/blog"><i class="fa fa-book"></i> Blog</a>
+                    <a href="/aboutus"><i class="fa fa-question-circle"></i> About Us</a>
+                    <a href="https://www.facebook.com/TecHour-2092875584315088/"><i class="fa fa-facebook-square"></i> Join Us On Facebook</a>
+                    <a href="/contact"><i class="fa fa-phone"></i> Contact</a>
                 </div>    
             </div>
         </div>
