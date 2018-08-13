@@ -7,7 +7,7 @@
 
     <div class="text-center">
         <h1 class="poststxt">POSTS</h1>
-        <a role="button" href="/home/posts/create" class="btn btn-default"><i class="fa fa-plus"> </i> New Post</a><br><br>
+        <a role="button" href="/home/posts/create" class="btn btn-default"><i class="fa fa-plus"></i> New Post</a><br><br>
     </div><br>
     @if(count($posts) > 0)
         @foreach($posts as $post)
@@ -20,11 +20,11 @@
                                 <small>Type : {{$post->type}}</small><br>
                                 <small>Created at {{$post->created_at}}</small>
                                 <div>
-                                    <a href="/home/posts/{{$post->id}}" role="button" class="btn btn-primary">View</a>
-                                    <a href="/home/posts/{{$post->id}}/edit" role="button" class="btn btn-primary">Edit</a>
+                                    <a href="/home/posts/{{$post->id}}" role="button" class="btn btn-default"><i class="fa fa-eye"></i> View</a>
+                                    <a href="/home/posts/{{$post->id}}/edit" role="button" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
                                     {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method'=>'POST', 'class'=>'btnlocation']) !!}
                                         {{Form::hidden('_method', 'DELETE')}}
-                                        {{Form::submit('Delete', ['class'=>'btn btn-danger'])}}
+                                        {{Form::button('<i class="fa fa-trash"></i> Delete', ['class'=>'btn btn-default', 'type'=>'submit'])}}
                                     {!! Form::close() !!}
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
 
 <style>
     .btn{
-        background-color: aliceblue;
+        background-color: #d6d6c2;
         color: black;
     }
 
