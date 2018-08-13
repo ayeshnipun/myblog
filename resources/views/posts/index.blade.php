@@ -7,7 +7,7 @@
 
     <div class="text-center">
         <h1 class="poststxt">POSTS</h1>
-        <a role="button" href="/home/posts/create" class="btn btn-primary">New Post</a><br><br>
+        <a role="button" href="/home/posts/create" class="btn btn-default"><i class="fa fa-plus"> </i> New Post</a><br><br>
     </div><br>
     @if(count($posts) > 0)
         @foreach($posts as $post)
@@ -39,6 +39,14 @@
 @endsection
 
 <style>
+    .btn{
+        background-color: aliceblue;
+        color: black;
+    }
+
+    i{
+        margin-right: 10px;
+    }
     .welcomtxt{
         color: aliceblue;
     }

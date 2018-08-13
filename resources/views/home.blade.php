@@ -17,7 +17,7 @@
                     You are logged in!
                         <br><br>
                     {{-- <input type="button" value="Add Post" class="btn btn-default" role="link"> --}}
-                    <a href="/home/posts/create" role="button" class="btn btn-primary">Add Post</a>
+                    <a href="/home/posts/create" role="button" class="btn btn-default"><i class="fa fa-plus"></i> Add Post</a>
                 </div>
             </div>
         </div>
@@ -26,5 +26,8 @@
 @endsection
 
 <style>
-   
+   .btn{
+       color: black;
+       background-color: #e6f2ff;
+   }
 </style>

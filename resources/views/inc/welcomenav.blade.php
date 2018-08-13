@@ -20,7 +20,7 @@
                     {!! Form::open(['route' => 'pages.searchPost', 'method'=>'POST', 'class'=> 'form-inline mt-2 mt-md-1']) !!}
                     <div>
                         {{Form::text('name', '', ['class'=>'form-control searchBox', 'placeholder'=>'Enter Keywords..'])}}
-                        {{Form::submit('Search', ['class'=>'btn btn-primary searchBtn'])}}
+                        {{Form::button('<i class="fa fa-search"></i>', ['class'=>'btn btn-primary searchBtn', 'type'=>'submit'])}}
                     </div>
                 {!! Form::close() !!}
             </div>
@@ -63,6 +63,7 @@
 
     .searchBtn{
         background-color: transparent;
+        height: 38px;
     }
 
     .searchBtn:hover{
@@ -73,6 +74,7 @@
         font-size: 15px;
         color: white !important;
         background-color: transparent;
+        width: 6cm !important;
     }
 
     .navbar a{
