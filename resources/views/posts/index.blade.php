@@ -24,7 +24,7 @@
                                     <a href="/home/posts/{{$post->id}}/edit" role="button" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
                                     {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method'=>'POST', 'class'=>'btnlocation']) !!}
                                         {{Form::hidden('_method', 'DELETE')}}
-                                        {{Form::button('<i class="fa fa-trash"></i> Delete', ['class'=>'btn btn-default', 'type'=>'submit'])}}
+                                        {{Form::button('<i class="fa fa-trash"></i> Delete', ['class'=>'btn btn-default btndel', 'type'=>'submit'])}}
                                     {!! Form::close() !!}
                                 </div>
                             </div>
@@ -39,6 +39,14 @@
 @endsection
 
 <style>
+    .btndel{
+        color: red !important;
+    }
+
+    .btndel:hover{
+        background-color: #ff9999;
+    }
+
     .btn{
         background-color: #d6d6c2;
         color: black;

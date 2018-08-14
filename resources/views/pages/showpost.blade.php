@@ -12,8 +12,8 @@
                     </div><br><br><br><br>
                     <div class="social-share col-md-12">
                         <br>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" target="_blank" role="button" class="btn btn-default shareBtn">Share on Facebook</a>
-                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(Request::fullUrl()) }}" target="_blank" role="button" class="btn btn-default shareBtn">Share on Twitter</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" target="_blank" role="button" class="btn btn-default shareBtn" title="Share on Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(Request::fullUrl()) }}" target="_blank" role="button" class="btn btn-default shareBtn" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
                     </div>
                     <!--comments display-->
                     <div class="card-body">
@@ -51,21 +51,25 @@
                 {{Form::textarea('content', '', ['class'=>'form-control areacstm', 'placeholder'=>'Comment'])}}
             </div><br><br>
             <div>
-                {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+                {{Form::button('<i class="fa fa-comment"></i> Submit', ['class'=>'btn btn-default btncmnt', 'type'=>'submit'])}}
             </div>
         {!! Form::close() !!}
     </div>
 @endsection
 
 <style>
+    .btncmnt:hover{
+        background-color: aqua;
+    }
+
     .shareBtn{
         background-color: #e0e0d1;
         color: #2e2e1f;
     }
 
     .shareBtn:hover{
-        background-color: #4d4d33;
-        color: #2e2e1f;
+        background-color: blue;
+        color: white;
     }
 
     .comment{
