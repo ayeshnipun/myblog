@@ -163,6 +163,27 @@
             </div>
         </div>
 
+        
+        <div class="card mx-auto" style="width: 25rem;">
+            <div class="card-body">
+                <h5 class="card-title text-center">Subscribe Here..</h5><br><br>
+                {!! Form::open(['method'=>'POST']) !!}
+                    <div>
+                        {{Form::label('name', 'Your Name')}}
+                        {{Form::text('name', '', ['class'=>'form-control', 'placeholder'=>'Enter Your Name'])}}
+                    </div><br>
+                    <div>
+                        {{Form::label('email', 'E Mail')}}
+                        {{Form::text('email', '', ['class'=>'form-control', 'placeholder'=>'Enter Your E Mail'])}}
+                    </div><br>
+                    <div>
+                        {{Form::submit('Subscribe', ['class'=>'btn btn-default'])}}
+                    </div>
+                {!! Form::close() !!}
+            </div>
+        </div>
+        
+
         <div class="whatAbout text-center" style="height:100%">
             <h2 class="Title">What Is This About</h2>
             <div>
