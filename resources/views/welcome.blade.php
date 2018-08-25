@@ -153,6 +153,7 @@
                         <h1 class="animh2" data-heading2="Hour">Hour</h1>
                     </p>  
                 </div>
+                    
                 <div class="links">
                     <a href="/blog"><i class="fa fa-book"></i> Blog</a>
                     <a href="/aboutus"><i class="fa fa-question-circle"></i> About Us</a>
@@ -174,17 +175,6 @@
             </div>   
         </div>
 
-        {{-- <div class="aboutUS text-center" style="height:100%">
-            <h2 class="Title">About Us</h2>
-            <div>
-                <p class="part1">
-                        Hey there...
-                </p>
-                <p class="part2">
-                    I'am Ayesh nipun. An undergraduate at UCSC (University of colombo School of Computing) <br>        
-                </p>
-            </div>   
-        </div> --}}
 
         <div class="reachUS text-center" style="height:100%">
             <h2 class="Title">Reach Us</h2>
