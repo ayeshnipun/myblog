@@ -142,6 +142,10 @@
             .link{
                 text-decoration: none;
             }
+
+            .card{
+                margin-bottom: 4cm;
+            }
         </style>
     </head>
     <body>
