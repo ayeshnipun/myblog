@@ -48,6 +48,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('posts', 'PostsController');
 Route::resource('comments', 'CommentsController');
 Route::resource('blog', 'PagesController');
+Route::resource('subscribe', 'SubscribesController');
 
 //comments
 Route::post('comments/{post_id}', ['uses'=>'PagesController@store', 'as'=>'comments.store']);

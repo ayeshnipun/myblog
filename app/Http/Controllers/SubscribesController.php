@@ -7,7 +7,6 @@ use TecHour\Subscribe;
 
 class SubscribesController extends Controller
 {
-    
     /**
      * Display a listing of the resource.
      *
@@ -15,8 +14,7 @@ class SubscribesController extends Controller
      */
     public function index()
     {
-        $subscribes = Subscribe::all();
-        return view('comments.index')->with('subscribes', $subscribes);
+        //
     }
 
     /**
@@ -39,20 +37,15 @@ class SubscribesController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'content' => 'required',
             'email' => 'required'
         ]);
 
-        $post = Post::find($post_id);
+        $subscribe = new Subscribe;
+        $subscribe->name = $request->input('name');
+        $subscribe->email = $request->input('email');
+        $subscribe->save();
 
-        $comment = new Commentt;
-        $comment->name = $request->input('name');
-        $comment->content = $request->input('content');
-        $comment->email = $request->input('email');
-        $comment->post()->associate($post);
-        $comment->save();
-
-        return redirect('/blog')->with('success', 'Success');
+        return redirect('/')->with('success', 'Success');
     }
 
     /**
@@ -63,7 +56,7 @@ class SubscribesController extends Controller
      */
     public function show($id)
     {
-        // return Commentt::find($id);
+        //
     }
 
     /**

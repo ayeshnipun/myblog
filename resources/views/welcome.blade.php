@@ -171,7 +171,7 @@
         <div class="card mx-auto" style="width: 25rem;">
             <div class="card-body">
                 <h5 class="card-title text-center">Subscribe Here..</h5><br><br>
-                {!! Form::open(['method'=>'POST']) !!}
+                {!! Form::open(['action' => 'SubscribesController@store', 'method'=>'POST', 'enctype'=>'multipart/form-data']) !!}
                     <div>
                         {{Form::label('name', 'Your Name')}}
                         {{Form::text('name', '', ['class'=>'form-control', 'placeholder'=>'Enter Your Name'])}}
