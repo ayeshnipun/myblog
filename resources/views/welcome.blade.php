@@ -209,7 +209,7 @@
                 </p>
                 OR <br><br>
                 <p>
-                    email us at <span>nipun.yesh@gmail.com</span>
+                    Email us at <span>nipun.yesh@gmail.com</span>
                 </p>
             </div>   
         </div>
